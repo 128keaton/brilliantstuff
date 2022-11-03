@@ -1,22 +1,45 @@
 .single-printer {
+  margin: 1em;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+
   .printer-main {
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
     width: 500px;
-    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
     height: 500px;
+    border-bottom: 2px solid gray;
   }
 
-  .stats {
-    li {
-      font-size: 16px;
-    }
+  p.caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
   }
 }
 
 .single-main.printers {
   .stats {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      flex: 1;
+    }
+
+    margin: 1em;
+
     li {
       font-size: 14px;
     }
+
+    flex: 1;
+  }
+
+  .upper {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+    width: 100%;
   }
 }

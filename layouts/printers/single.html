@@ -4,7 +4,7 @@
         {{- partial "header.html" . -}}
         <div class="window">
             <div class="title-bar">
-                <div class="title-bar-text">{{.Title}}</div>
+                <div class="title-bar-text">Printer</div>
                 <div class="title-bar-controls">
 
                 </div>
@@ -13,21 +13,35 @@
                 <div class="upper">
                     <div class="stats">
                         {{ $statsFile := (lower .Title) }}
+                        {{ $printerName := (.Title) }}
                         {{ $statsOuter := (index .Site.Data.printer_stats $statsFile) }}
                         {{ $stats := ($statsOuter.result.job_totals) }}
                         {{with $stats }}
 
 
                             <ul class="tree-view">
+                                <li><strong>Name</strong>: {{ $printerName }}</li>
                                 <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
-                                <li><strong>Longest Job</strong>: {{ $stats.longest_job}}</li>
+                                <li><strong>Longest Job</strong>: {{ $stats.longest_job | lang.FormatNumber 2 }} hours</li>
+                                <li><strong>Total Print Time</strong>: {{ $stats.total_print_time | lang.FormatNumber 2 }} hours</li>
+                                <li><strong>Total Filament Used</strong>: {{ $stats.total_filament_used | lang.FormatNumber 2 }} meters</li>
+                            </ul>
+                        {{ end }}
+
+                            <ul class="tree-view">
+                                <li><strong>Model</strong>: Voron 2.4</li>
+                                <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
+                                <li><strong>Longest Job</strong>: {{ $stats.longest_job | lang.FormatNumber 2 }} hours</li>
+                                <li><strong>Total Print Time</strong>: {{ $stats.total_print_time | lang.FormatNumber 2 }} hours</li>
+                                <li><strong>Total Filament Used</strong>: {{ $stats.total_filament_used | lang.FormatNumber 2 }} meters</li>
                             </ul>
 
-                        {{ end }}
+
                     </div>
 
                     <div class="single-printer">
                         <img class="printer-main" src="printers/dog-whole.png" alt="Printer">
+                        <p class="caption">{{.Title}}</p>
                     </div>
                 </div>
 
@@ -38,6 +52,6 @@
             <div class="status-bar">
             </div>
         </div>
-
     </div>
+    {{- partial "single-footer.html" . -}}
 {{ end }}
