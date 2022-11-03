@@ -8,6 +8,16 @@
     margin-bottom: 1em;
     padding-bottom: 2em;
     position: relative;
+
+   @media screen and (max-width: 850px) {
+     .header {
+       max-width: 80vw;
+       margin: 0 auto;
+       img {
+         max-width: 200px;
+       }
+     }
+   }
   }
 
   .footer {

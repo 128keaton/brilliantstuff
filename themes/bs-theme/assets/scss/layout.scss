@@ -60,6 +60,9 @@ body {
 .construction {
   text-align: center;
   width: 100%;
+  img {
+    max-width: 100vw;
+  }
 }
 
 .footer {
