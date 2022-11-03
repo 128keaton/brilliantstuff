@@ -1,16 +1,53 @@
 {{ define "main" }}
-<img src="/img/bs-card.png" alt="logo" class="logo">
-<img src="/img/dollar.gif" alt="dollar" class="dollar">
-<div class="inner-content homepage">
-    <div class="printers">
-       <div class="header">
-           <img src="/img/printer.gif" alt="printers">
+   <div class="homepage">
+       {{ $mainLogo := resources.Get "/img/bs-card.png" }}
+       <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
+
+       <div class="arrow-down">
+           <p>(scroll down)</p>
+           {{ $backArrow := resources.Get "/img/back-arrow.gif" }}
+           <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
        </div>
-        <div class="list">
-            {{ range (index .Site.Data.printers) }}
-                {{ partial "printers/printer-window" . }}
-            {{ end }}
-        </div>
-    </div>
-</div>
+       <div class="inner-content homepage">
+           <div class="printers section">
+               {{- partial "construction.html" . -}}
+               <div class="header">
+                   {{ $printersGif := resources.Get "/img/printer.gif" }}
+                   <img src="{{ $printersGif.RelPermalink }}" alt="printers">
+               </div>
+               <div class="list">
+                   {{ range (index .Site.Data.printers) }}
+                       {{ partial "printers/printer-window" . }}
+                   {{ end }}
+               </div>
+           </div>
+
+           <div class="failures section">
+               {{- partial "construction.html" . -}}
+               <div class="header">
+                   <h1>Printer</h1>
+                   {{ $failureGif := resources.Get "/img/failure.gif" }}
+                   <img src="{{ $failureGif.RelPermalink }}" alt="failure">
+               </div>
+
+               <div class="list">
+
+               </div>
+           </div>
+
+           <div class="store section">
+               {{- partial "construction.html" . -}}
+               <div class="header" style="background-image: url(img/marquee.gif)">
+                   <h1>Store</h1>
+                   <div class="dollar">
+                       {{ $dollarGif := resources.Get "/img/dollar.gif" }}
+                       <img src="{{ $dollarGif.RelPermalink }}" alt="dollar">
+                   </div>
+               </div>
+               <div class="list">
+
+               </div>
+           </div>
+       </div>
+   </div>
 {{ end }}

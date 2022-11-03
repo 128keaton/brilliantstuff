@@ -1,3 +1,4 @@
 <div class="header">
-    <img src="/img/bs-logo-2.png" alt="logo" class="logo-navigation">
+    {{ $logo := resources.Get "/img/bs-logo-3.png" }}
+    <img src="{{ $logo.RelPermalink }}" alt="logo" class="logo-navigation">
 </div>

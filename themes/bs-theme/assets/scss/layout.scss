@@ -5,13 +5,11 @@ html, body {
   padding: 0;
   color: white;
 }
+
 body {
-  background-image: url("/img/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-color: black;
 
-  &.single {
+  .single-main {
     display: flex;
     flex-direction: column;
 
@@ -24,7 +22,7 @@ body {
       width: 100%;
       height: 100%;
       opacity: 0.4;
-      background-image: url("/img/tile/space.png");
+      background-image: url("../img/tile/space.png");
       background-repeat: repeat;
       background-size: unset;
       z-index: -1;
@@ -32,10 +30,6 @@ body {
   }
 }
 
-.logo {
-  width: 100%;
-  filter: drop-shadow(30px 10px 4px #4444dd);
-}
 
 
 .footer {
@@ -61,4 +55,13 @@ body {
   margin: 0;
   vertical-align: middle;
   line-height: 24px;
+}
+
+.construction {
+  text-align: center;
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
 }

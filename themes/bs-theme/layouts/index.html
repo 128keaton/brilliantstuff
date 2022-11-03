@@ -1,6 +1,8 @@
-{{ define "main" }}
-    <img src="/img/bs-card.png" alt="logo" class="logo">
-    <div class="inner-content homepage">
-        {{ .Content }}
-    </div>
-{{ end }}
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+<body class="homepage">
+{{- block "main" . }}{{- end }}
+{{- partial "footer.html" . -}}
+</body>
+</html>

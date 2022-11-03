@@ -1,0 +1,38 @@
+.store {
+
+  .dollar {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    background-image: url(/img/marquee.gif);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    h1 {
+      font-family: "Comic Sans MS", sans-serif;
+      line-height: 25px;
+      font-weight: normal;
+      color: red;
+      padding-bottom: 10px;
+
+      &:nth-of-type(1) {
+        text-shadow: 0 0 .1vw #F3BCBC, 0 0 .5vw #F12F21, 0 0 1.5vw #f00;
+      }
+      &:nth-of-type(2) {
+        text-transform: uppercase;
+        text-shadow: 0 0 .1vw #F7CEEA, .5vw .5vw .5vw #E0018D, -.5vw -.5vw .5vw #E0018D, .5vw -.5vw .5vw #E0018D, -.5vw .5vw .5vw #E0018D, 0 -.5vw .5vw #E0018D, 0 .5vw .5vw #E0018D, .5vw .5vw .5vw #E0018D, 0 0 5vw #000;
+        letter-spacing: 2vw;
+      }
+    }
+  }
+}

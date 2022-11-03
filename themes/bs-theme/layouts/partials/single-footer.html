@@ -1,5 +1,6 @@
 <div class="footer">
-    <a href="/">
-        <img src="/img/back.gif" alt="Go back home" class="back-effect">
+    <a href="{{ .Site.BaseURL }}">
+        {{ $backGif := resources.Get "/img/back.gif" }}
+        <img src="{{ $backGif.RelPermalink }}" alt="Go back home" class="back-effect">
     </a>
 </div>

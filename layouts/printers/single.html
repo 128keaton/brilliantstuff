@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+    <div class="single-main {{.Type}}">
+        {{- partial "header.html" . -}}
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">{{.Title}}</div>
+                <div class="title-bar-controls">
+
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="upper">
+                    <div class="stats">
+                        {{ $statsFile := (lower .Title) }}
+                        {{ $statsOuter := (index .Site.Data.printer_stats $statsFile) }}
+                        {{ $stats := ($statsOuter.result.job_totals) }}
+                        {{with $stats }}
+
+
+                            <ul class="tree-view">
+                                <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
+                                <li><strong>Longest Job</strong>: {{ $stats.longest_job}}</li>
+                            </ul>
+
+                        {{ end }}
+                    </div>
+
+                    <div class="single-printer">
+                        <img class="printer-main" src="printers/dog-whole.png" alt="Printer">
+                    </div>
+                </div>
+
+                <div class="inner">
+                    {{.Content}}
+                </div>
+            </div>
+            <div class="status-bar">
+            </div>
+        </div>
+
+    </div>
+{{ end }}

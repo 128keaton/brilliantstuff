@@ -1,0 +1,22 @@
+.single-printer {
+  .printer-main {
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    width: 500px;
+    padding: 1px;
+    height: 500px;
+  }
+
+  .stats {
+    li {
+      font-size: 16px;
+    }
+  }
+}
+
+.single-main.printers {
+  .stats {
+    li {
+      font-size: 14px;
+    }
+  }
+}

@@ -3,18 +3,22 @@
 {{- partial "head.html" . -}}
 
 <body class="single">
-{{- partial "header.html" . -}}
+
 <div class="single-main {{.Type}}">
     {{- block "main" . }}
+
         <div class="window">
             <div class="title-bar">
                 <div class="title-bar-text">{{.Title}}</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close">
+                    </button>
+                </div>
             </div>
             <div class="window-body">
                 {{.Content}}
             </div>
             <div class="status-bar">
-                {{ partial "breadcrumb" . }}
             </div>
         </div>
     {{- end }}

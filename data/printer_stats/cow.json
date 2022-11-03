@@ -1,0 +1,12 @@
+{
+  "result": {
+    "job_totals": {
+      "total_jobs": 395,
+      "total_time": 2390826.4680257174,
+      "total_print_time": 2293038.2810482564,
+      "total_filament_used": 4488912.303674526,
+      "longest_job": 70584.03613800323,
+      "longest_print": 69997.24091535294
+    }
+  }
+}
