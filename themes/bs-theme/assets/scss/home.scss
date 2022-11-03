@@ -1,0 +1,74 @@
+.homepage {
+  .printers {
+    background: black;
+
+    .header {
+      padding-left: 3rem;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      text-align: center;
+    }
+
+    .list {
+      padding: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .printer {
+      background-position: bottom;
+      background-size: cover;
+      width: 500px;
+      height: 200px;
+      background-repeat: no-repeat;
+      margin: 1em;
+    }
+
+    .window {
+      color: black;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .window-body {
+        flex: 1;
+        margin: 0;
+        min-height: 500px;
+
+        img {
+          width: 500px;
+        }
+      }
+
+      .status-bar {
+        justify-content: flex-end;
+        padding-right: 5px;
+        padding-bottom: 15px;
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        z-index: 5;
+      }
+
+      .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img {
+          width: 100%;
+          height: 317px;
+        }
+      }
+    }
+  }
+
+}
+
+.dollar {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}

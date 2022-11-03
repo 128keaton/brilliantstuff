@@ -1,0 +1,19 @@
+<div class="printer window">
+    <div class="title-bar">
+        <div class="title-bar-text">{{.model}}</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <img src="{{.viewImage}}" alt="Printer">
+    </div>
+    <div class="status-bar">
+        <a class="fake-button" href="{{.permalink}}">View</a>
+    </div>
+    <div class="card-overlay">
+        <img src="{{.cardImage}}" alt="overlay">
+    </div>
+</div>

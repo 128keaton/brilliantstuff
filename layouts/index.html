@@ -1,0 +1,16 @@
+{{ define "main" }}
+<img src="/img/bs-card.png" alt="logo" class="logo">
+<img src="/img/dollar.gif" alt="dollar" class="dollar">
+<div class="inner-content homepage">
+    <div class="printers">
+       <div class="header">
+           <img src="/img/printer.gif" alt="printers">
+       </div>
+        <div class="list">
+            {{ range (index .Site.Data.printers) }}
+                {{ partial "printers/printer-window" . }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
