@@ -22,9 +22,9 @@
                             <ul class="tree-view">
                                 <li><strong>Name</strong>: {{ $printerName }}</li>
                                 <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
-                                <li><strong>Longest Job</strong>: {{ $stats.longest_job | lang.FormatNumber 2 }} hours</li>
-                                <li><strong>Total Print Time</strong>: {{ $stats.total_print_time | lang.FormatNumber 2 }} hours</li>
-                                <li><strong>Total Filament Used</strong>: {{ $stats.total_filament_used | lang.FormatNumber 2 }} meters</li>
+                                <li><strong>Longest Job</strong>: {{ (div $stats.longest_job  3660) | lang.FormatNumber 2 }} hours</li>
+                                <li><strong>Total Print Time</strong>: {{  (div $stats.total_print_time  3600) | lang.FormatNumber 2 }} hours</li>
+                                <li><strong>Total Filament Used</strong>: {{ (div $stats.total_filament_used 1000) | lang.FormatNumber 2 }} meters</li>
                             </ul>
                         {{ end }}
 

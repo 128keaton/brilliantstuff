@@ -11,11 +11,7 @@
   }
 
 
-  @media screen and (max-width: 850px) {
-    .dollar {
-      display: none;
-    }
-  }
+
 
   .header {
     background-image: url(/img/marquee.gif);
@@ -24,6 +20,8 @@
     background-position: center;
     padding-top: 1px;
     padding-bottom: 1px;
+
+
 
     h1 {
       font-family: "Comic Sans MS", sans-serif;
@@ -39,6 +37,20 @@
         text-transform: uppercase;
         text-shadow: 0 0 .1vw #F7CEEA, .5vw .5vw .5vw #E0018D, -.5vw -.5vw .5vw #E0018D, .5vw -.5vw .5vw #E0018D, -.5vw .5vw .5vw #E0018D, 0 -.5vw .5vw #E0018D, 0 .5vw .5vw #E0018D, .5vw .5vw .5vw #E0018D, 0 0 5vw #000;
         letter-spacing: 2vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .dollar {
+      display: none;
+    }
+
+    .header {
+      background-size: contain;
+
+      h1 {
+        font-size: 3.2em;
       }
     }
   }
