@@ -1,6 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 type: Printer
-model: <<Model>>
+model: <<model>>
+firmware: <<firmware>>
+mods:
+-
 ---
 

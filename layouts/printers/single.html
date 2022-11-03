@@ -29,19 +29,27 @@
                         {{ end }}
 
                             <ul class="tree-view">
-                                <li><strong>Model</strong>: Voron 2.4</li>
-                                <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
-                                <li><strong>Longest Job</strong>: {{ $stats.longest_job | lang.FormatNumber 2 }} hours</li>
-                                <li><strong>Total Print Time</strong>: {{ $stats.total_print_time | lang.FormatNumber 2 }} hours</li>
-                                <li><strong>Total Filament Used</strong>: {{ $stats.total_filament_used | lang.FormatNumber 2 }} meters</li>
+                                <li><strong>Model</strong>: {{.Params.model}}</li>
+                                <li><strong>Firmware</strong>: {{.Params.firmware}}</li>
+                                <li>
+                                    <details open>
+                                        <summary><strong>Mods</strong></summary>
+                                        <ul>
+                                            {{ range (index .Params.mods) }}
+                                                <li>{{.}}</li>
+                                            {{ end }}
+                                        </ul>
+                                    </details>
+                                </li>
                             </ul>
 
 
                     </div>
 
                     <div class="single-printer">
-                        <img class="printer-main" src="printers/dog-whole.png" alt="Printer">
+                        <img class="printer-main" src="printers/{{(lower .Title)}}-whole.png" alt="Printer">
                         <p class="caption">{{.Title}}</p>
+
                     </div>
                 </div>
 
