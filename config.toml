@@ -1,4 +1,4 @@
-baseURL = 'https://128keaton.github.io/brilliantstuff'
+baseURL = ''
 languageCode = 'en-us'
 title = 'Brilliant Stuff'
 theme="bs-theme"

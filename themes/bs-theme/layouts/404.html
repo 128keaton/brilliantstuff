@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 {{- partial "head.html" . -}}
 <body class="404">
-<div id="content" class="404">
-    <img src="/img/system-failure.gif" alt="Failure">
+<div id="content" class="404" style="text-align: center">
+    {{ $uhohGif := resources.Get "/img/system-failure.gif" }}
+    <img src="{{ $uhohGif.RelPermalink }}" alt="Failure">
+    {{- partial "single-footer.html" . -}}
 </div>
 </body>
 </html>
