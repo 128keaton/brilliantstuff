@@ -7,7 +7,7 @@ categories:
 - failure
 ---
 
-![print](/img/failures/ercf.jpg)
+![print](img/failures/ercf.jpg)
 
 Still calibrating the ERCF, but this is the "visual" comparison as we go
 

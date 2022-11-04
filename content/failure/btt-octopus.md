@@ -2,7 +2,7 @@
 title: "BTT Octopus"
 date: 2022-11-03T21:39:12-05:00
 draft: false
-cover: /img/failures/btt-board.jpeg
+cover: img/failures/btt-board.jpeg
 categories:
 - failure
 ---
