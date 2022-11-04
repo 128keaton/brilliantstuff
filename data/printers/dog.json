@@ -3,5 +3,6 @@
   "model": "Voron 2.4R2",
   "cardImage": "printer-cards/dog.png",
   "viewImage": "printers/dog-whole.png",
-  "permalink": "printers/dog"
+  "permalink": "printers/dog",
+  "broken": false
 }

@@ -28,10 +28,14 @@
                    <h1>Printer</h1>
                    {{ $failureGif := resources.Get "/img/failure.gif" }}
                    <img src="{{ $failureGif.RelPermalink }}" alt="failure">
+                   <h1>Collection</h1>
                </div>
 
                <div class="list">
-
+                   {{$failures := where .Site.RegularPages ".Section" "eq" "failure" }}
+                   {{ range $failures }}
+                       <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+                   {{ end }}
                </div>
            </div>
 

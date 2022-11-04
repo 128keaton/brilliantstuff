@@ -1,0 +1,3 @@
+---
+---
+{{ $paginator := .Paginate .Site.RegularPages }}
