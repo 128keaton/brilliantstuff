@@ -31,10 +31,10 @@
                    <h1>Collection</h1>
                </div>
 
-               <div class="list">
+               <div class="list failures-list">
                    {{$failures := where .Site.RegularPages ".Section" "eq" "failure" }}
                    {{ range $failures }}
-                       <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+                           {{ partial "failure-summary.html" . }}
                    {{ end }}
                </div>
            </div>

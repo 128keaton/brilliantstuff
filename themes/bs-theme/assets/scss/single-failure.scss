@@ -1,8 +1,8 @@
 .failure {
-  margin: 1em;
   padding: 0;
   position: relative;
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  min-height: 100vh;
+  margin: 0;
 
   .printer-main {
     width: 500px;
@@ -24,11 +24,83 @@
     font-size: 14px;
   }
 
+
   @media screen and (max-width: 850px) {
     margin: 0;
   }
 
-  .inner img {
-    max-width: 90%;
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    img {
+      max-width: 350px;
+      padding: 5px;
+    }
+
+    p:first-child {
+      align-self: center;
+    }
+
+    p {
+
+      font-size: 14px;
+      align-self: flex-start;
+    }
+  }
+
+}
+
+
+.failures-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+  .failure-summary {
+    display: flex;
+    width: 300px;
+    height: 340px;
+
+    .window-body {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+
+      .status-bar {
+        margin: 0;
+      }
+
+      img {
+        flex: 1;
+        max-height: 200px;
+        object-fit: cover;
+        margin-top: -1px;
+        margin-bottom: -2px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      h2, h3 {
+        padding: 0.5em;
+        font-weight: normal;
+        background-color: silver;
+        margin: 0;
+      }
+    }
   }
 }

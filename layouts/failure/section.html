@@ -1,0 +1,8 @@
+<p class="asdasd">
+    {{ .Summary }}
+</p>
+{{- if .Truncated }}
+<p>
+    <a href="{{ .RelPermalink }}">Read more...</a>
+</p>
+{{- end }}
