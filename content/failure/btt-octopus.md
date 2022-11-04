@@ -7,8 +7,8 @@ categories:
 - failure
 ---
 
-![board](/img/failures/btt-board.jpeg)
-![steppers](/img/failures/btt-steppers.jpeg)
+![board](img/failures/btt-board.jpeg)
+![steppers](img/failures/btt-steppers.jpeg)
 
 This happened after a power on.
 
