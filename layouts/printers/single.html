@@ -1,65 +1,87 @@
 {{ define "main" }}
 
-    <div class="single-main {{.Type}}">
-        {{- partial "header.html" . -}}
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Printer</div>
-                <div class="title-bar-controls">
-
-                </div>
-            </div>
-            <div class="window-body">
-                <div class="upper">
-                    <div class="stats">
-                        {{ $statsFile := (lower .Title) }}
-                        {{ $printerName := (.Title) }}
-                        {{ $statsOuter := (index .Site.Data.printer_stats $statsFile) }}
-                        {{ $stats := ($statsOuter.result.job_totals) }}
-                        {{with $stats }}
-
-
-                            <ul class="tree-view">
-                                <li><strong>Name</strong>: {{ $printerName }}</li>
-                                <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
-                                <li><strong>Longest Job</strong>: {{ (div $stats.longest_job  3660) | lang.FormatNumber 2 }} hours</li>
-                                <li><strong>Total Print Time</strong>: {{  (div $stats.total_print_time  3600) | lang.FormatNumber 2 }} hours</li>
-                                <li><strong>Total Filament Used</strong>: {{ (div $stats.total_filament_used 1000) | lang.FormatNumber 2 }} meters</li>
-                            </ul>
-                        {{ end }}
-
-                            <ul class="tree-view">
-                                <li><strong>Model</strong>: {{.Params.model}}</li>
-                                <li><strong>Firmware</strong>: {{.Params.firmware}}</li>
-                                <li>
-                                    <details open>
-                                        <summary><strong>Mods</strong></summary>
-                                        <ul>
-                                            {{ range (index .Params.mods) }}
-                                                <li>{{.}}</li>
-                                            {{ end }}
-                                        </ul>
-                                    </details>
-                                </li>
-                            </ul>
-
-
-                    </div>
-
-                    <div class="single-printer">
-                        <img class="printer-main" src="printers/{{(lower .Title)}}-whole.png" alt="Printer">
-                        <p class="caption">{{.Title}}</p>
-
-                    </div>
-                </div>
-
-                <div class="inner">
-                    {{.Content}}
-                </div>
-            </div>
-            <div class="status-bar">
+<div class="single-main {{.Type}}">
+    {{- partial "header.html" . -}}
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Printer</div>
+            <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close" data-link="../../"></button>
             </div>
         </div>
+        <div class="window-body">
+            <div class="upper">
+                <div class="stats">
+                    {{ $statsFile := (lower .Title) }}
+                    {{ $printerName := (.Title) }}
+                    {{ $statsOuter := (index .Site.Data.printer_stats $statsFile) }}
+                    {{ $stats := ($statsOuter.result.job_totals) }}
+                    {{with $stats }}
+
+
+                    <ul class="tree-view">
+                        <li><strong>Name</strong>: {{ $printerName }}</li>
+                        <li><strong>Total Jobs</strong>: {{ $stats.total_jobs}}</li>
+                        <li><strong>Longest Job</strong>: {{ (div $stats.longest_job 3660) | lang.FormatNumber 2 }}
+                            hours
+                        </li>
+                        <li><strong>Total Print Time</strong>: {{ (div $stats.total_print_time 3600) | lang.FormatNumber
+                            2 }} hours
+                        </li>
+                        <li><strong>Total Filament Used</strong>: {{ (div $stats.total_filament_used 1000) |
+                            lang.FormatNumber 2 }} meters
+                        </li>
+                    </ul>
+                    {{ end }}
+
+                    <ul class="tree-view">
+                        <li><strong>Model</strong>: {{.Params.model}}</li>
+                        <li><strong>Firmware</strong>: {{.Params.firmware}}</li>
+                        <li>
+                            <details open>
+                                <summary><strong>Mods</strong></summary>
+                                <ul>
+                                    {{ range (index .Params.mods) }}
+                                    <li>{{.}}</li>
+                                    {{ end }}
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="single-printer">
+                    <img class="printer-main" src="printers/{{(lower .Title)}}-whole.png" alt="Printer">
+                    <p class="caption">{{.Title}}</p>
+
+                </div>
+            </div>
+
+            <div class="inner printer-content">
+                {{.Content}}
+            </div>
+        </div>
+        <div class="status-bar">
+        </div>
     </div>
-    {{- partial "single-footer.html" . -}}
+</div>
+{{- partial "single-footer.html" . -}}
+
+<script type="text/javascript">
+    (function () {
+        document.querySelectorAll("button").forEach(element => {
+            const buttonType = element.getAttribute("aria-label");
+            const buttonLink = element.getAttribute("data-link");
+            if (buttonType === "Close" && !!buttonLink) {
+                element.addEventListener('click', () => {
+                    window.location.href = buttonLink;
+                });
+            }
+        })
+    })();
+</script>
 {{ end }}

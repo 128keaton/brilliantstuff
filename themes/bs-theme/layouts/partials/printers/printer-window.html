@@ -3,11 +3,15 @@
         <div class="title-bar-text">{{.model}}</div>
         <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
+            <button aria-label="Maximize" data-link="{{.permalink}}"></button>
             <button aria-label="Close"></button>
         </div>
     </div>
     <div class="window-body">
+        {{ if .broken }}
+        <img src="/img/failure.gif" class="failure-gif-overlay" alt="Failure">
+        <img src="/img/middle-finger.png" class="middle-finger-overlay" alt="Failure">
+        {{end}}
         <img src="{{.viewImage}}" alt="Printer">
     </div>
     <div class="status-bar">

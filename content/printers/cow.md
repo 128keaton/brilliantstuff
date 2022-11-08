@@ -8,5 +8,3 @@ mods:
 - Waveshare Touchscreen
 - LED Diffusers
 ---
-
-asdasdasd

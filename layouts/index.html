@@ -74,4 +74,17 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+(function() {
+    document.querySelectorAll("button").forEach(element => {
+        const buttonType = element.getAttribute("aria-label");
+        const buttonLink = element.getAttribute("data-link");
+        if (buttonType === "Maximize" && !!buttonLink) {
+           element.addEventListener('click', () => {
+               window.location.href = buttonLink;
+           });
+        }
+})
+})();
+</script>
 {{ end }}

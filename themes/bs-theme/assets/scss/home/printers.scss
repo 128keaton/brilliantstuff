@@ -35,6 +35,27 @@
     @media screen and (max-width: 800px) {
       width: 100vw;
     }
+
+    .failure-gif-overlay {
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      right: 0;
+      z-index: 3;
+    }
+
+  .middle-finger-overlay {
+        position: absolute;
+        top: 4em;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%!important;
+        object-fit: contain;
+        opacity: 0.78;
+        z-index: 2;
+        height: calc(100% - 6em);
+    }
   }
 
   .window {
@@ -74,13 +95,17 @@
       right: 3px;
       bottom: 3px;
       z-index: 5;
+
+      .fake-button {
+          z-index: 450;
+      }
     }
 
     .card-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
-
+      z-index: 4;
       img {
         width: 100%;
         height: 317px;
