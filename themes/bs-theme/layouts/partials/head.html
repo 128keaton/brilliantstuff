@@ -3,10 +3,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ $style := resources.Get "scss/style.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css"/>
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}/favicon.ico">
     <title>{{ $title }}</title>
+
+    {{ $mainLogo := resources.Get "/img/bs-card.png" }}
+    <!-- Primary Meta Tags -->
+    <title>Brilliant Stuff</title>
+    <meta name="title" content="Brilliant Stuff">
+    <meta name="description" content="'we print straight garbage'">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fucklegal.com/">
+    <meta property="og:title" content="Brilliant Stuff">
+    <meta property="og:description" content="'we print straight garbage'">
+    <meta property="og:image" content="{{ $mainLogo.RelPermalink }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fucklegal.com/">
+    <meta property="twitter:title" content="Brilliant Stuff">
+    <meta property="twitter:description" content="'we print straight garbage'">
+    <meta property="twitter:image" content="{{ $mainLogo.RelPermalink }}">
 </head>
