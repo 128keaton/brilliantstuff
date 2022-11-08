@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "run hugo serve",
+            "type": "command",
+            "program": "hugo",
+            "args": ["serve"]
+        }
+    ]
+}

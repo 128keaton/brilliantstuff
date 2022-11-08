@@ -15,6 +15,7 @@
                    {{ $printersGif := resources.Get "/img/printer.gif" }}
                    <img src="{{ $printersGif.RelPermalink }}" alt="printers">
                </div>
+               {{- partial "twitch-stream.html" . -}}
                <div class="list">
                    {{ range (index .Site.Data.printers) }}
                        {{ partial "printers/printer-window" . }}
