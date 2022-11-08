@@ -2,7 +2,7 @@
   "name": "Cow",
   "model": "Voron 2.4R2",
   "cardImage": "printer-cards/cow.png",
-  "viewImage": "printers/cow-whole.png",
+  "viewImage": "printers/cow-whole.jpg",
   "permalink": "printers/cow",
   "broken": false
 }
