@@ -1,6 +1,18 @@
-<!-- Add a placeholder for the Twitch embed -->
-<div class="twitch-wrapper">
-<div id="twitch-embed"></div>
+<div class="window twitch-window">
+    <div class="title-bar">
+        <div class="title-bar-text">Live!</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <div id="twitch-embed"></div>
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field"><a href="https://twitch.tv/printgod420">https://twitch.tv/printgod420</a></p>
+    </div>
 </div>
 
 <!-- Load the Twitch embed script -->
@@ -8,7 +20,7 @@
 
 <!-- Create a Twitch.Player object. This will render within the placeholder div -->
 <script type="text/javascript">
-new Twitch.Player("twitch-embed", {
-    channel: "printgod420"
-});
+    new Twitch.Player("twitch-embed", {
+        channel: "printgod420"
+    });
 </script>

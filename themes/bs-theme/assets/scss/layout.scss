@@ -65,26 +65,3 @@ body {
   text-align: center;
 }
 
-.twitch-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 56vh;
-  background: url("/img/curtain.gif") center;
-  background-repeat-y: no-repeat;
-  background-size: contain;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  
-  #twitch-embed {
-    flex: 1;
-    height: 100%;
-    max-width: 65%;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}

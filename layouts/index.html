@@ -1,58 +1,67 @@
 {{ define "main" }}
-   <div class="homepage">
-       {{ $mainLogo := resources.Get "/img/bs-card.png" }}
-       <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
+<div class="homepage">
+    {{ $mainLogo := resources.Get "/img/bs-card.png" }}
+    <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
 
-       <div class="arrow-down">
-           <p>(scroll down)</p>
-           {{ $backArrow := resources.Get "/img/back-arrow.gif" }}
-           <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
-       </div>
-       <div class="inner-content homepage">
-           <div class="printers section">
-               {{- partial "construction.html" . -}}
-               <div class="header">
-                   {{ $printersGif := resources.Get "/img/printer.gif" }}
-                   <img src="{{ $printersGif.RelPermalink }}" alt="printers">
-               </div>
-               {{- partial "twitch-stream.html" . -}}
-               <div class="list">
-                   {{ range (index .Site.Data.printers) }}
-                       {{ partial "printers/printer-window" . }}
-                   {{ end }}
-               </div>
-           </div>
+    <div class="arrow-down">
+        <p>(scroll down)</p>
+        {{ $backArrow := resources.Get "/img/back-arrow.gif" }}
+        <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
+    </div>
+    <div class="inner-content homepage">
+        <div class="printers section">
+            <div class="header">
+                {{ $printersGif := resources.Get "/img/printer.gif" }}
+                <img src="{{ $printersGif.RelPermalink }}" alt="printers">
+            </div>
+            {{- partial "twitch-stream.html" . -}}
+            <div class="list">
+                {{ range (index .Site.Data.printers) }}
+                {{ partial "printers/printer-window" . }}
+                {{ end }}
+            </div>
+        </div>
 
-           <div class="failures section">
-               {{- partial "construction.html" . -}}
-               <div class="header">
-                   <h1>Printer</h1>
-                   {{ $failureGif := resources.Get "/img/failure.gif" }}
-                   <img src="{{ $failureGif.RelPermalink }}" alt="failure">
-                   <h1>Collection</h1>
-               </div>
+        <div class="failures section">
+            {{- partial "construction.html" . -}}
+            <div class="header">
+                {{ $failureGif := resources.Get "/img/nuke.gif" }}
 
-               <div class="list failures-list">
-                   {{$failures := where .Site.RegularPages ".Section" "eq" "failure" }}
-                   {{ range $failures }}
-                           {{ partial "failure-summary.html" . }}
-                   {{ end }}
-               </div>
-           </div>
+                <div class="left">
+                    <img src="{{ $failureGif.RelPermalink }}" alt="failure">
+                </div>
 
-           <div class="store section">
-               {{- partial "construction.html" . -}}
-               <div class="header" style="background-image: url(img/marquee.gif)">
-                   <h1>Store</h1>
-                   <div class="dollar">
-                       {{ $dollarGif := resources.Get "/img/dollar.gif" }}
-                       <img src="{{ $dollarGif.RelPermalink }}" alt="dollar">
-                   </div>
-               </div>
-               <div class="list">
+                <div class="center">
+                    <h1>Failure Gallery</h1>
+                </div>
 
-               </div>
-           </div>
-       </div>
-   </div>
+                <div class="right">
+                    <img src="{{ $failureGif.RelPermalink }}" alt="failure">
+                </div>
+
+            </div>
+
+            <div class="list failures-list">
+                {{$failures := where .Site.RegularPages ".Section" "eq" "failure" }}
+                {{ range $failures }}
+                {{ partial "failure-summary.html" . }}
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="store section">
+            {{- partial "construction.html" . -}}
+            <div class="header" style="background-image: url(img/marquee.gif)">
+                <h1>Store</h1>
+                <div class="dollar">
+                    {{ $dollarGif := resources.Get "/img/dollar.gif" }}
+                    <img src="{{ $dollarGif.RelPermalink }}" alt="dollar">
+                </div>
+            </div>
+            <div class="list">
+
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}
