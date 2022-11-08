@@ -35,11 +35,16 @@
   p.welcome {
     text-align: center;
     color: lightgray;
-    font-size: 25px;
+    font-size: 32px;
     padding: 2em;
     background: black;
     -webkit-font-smoothing: none;
     font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+    position: absolute;;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    font-style: italic;
   }
 
   .motd {

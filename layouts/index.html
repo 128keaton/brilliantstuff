@@ -1,5 +1,9 @@
 {{ define "main" }}
 <div class="homepage">
+<p class="welcome">
+Welcome to.....
+</p>
+
     {{ $mainLogo := resources.Get "/img/bs-card.png" }}
     <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
 
@@ -12,9 +16,6 @@
         <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
     </div>
     <div class="inner-content homepage">
-        <p class="welcome">
-            Welcome to Brilliant Stuff
-        </p>
         <div class="printers section">
             <div class="header">
                 {{ $sliderGif := resources.Get "/img/slidbar.gif" }}
@@ -76,7 +77,7 @@
 
         <div class="store section">
             {{- partial "construction.html" . -}}
-            <div class="header" style="background-image: url(img/marquee.gif)">
+            <div class="header">
                 {{ $storeHeader := resources.Get "/img/store.png" }}
                 <img class="header-image" src="{{ $storeHeader.RelPermalink }}" alt="store">
                 <div class="dollar">

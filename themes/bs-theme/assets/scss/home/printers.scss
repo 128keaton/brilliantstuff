@@ -22,6 +22,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
+
+    @media screen and (max-width: 800px) {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+
   }
 
   .printer {
@@ -68,12 +75,14 @@
 
     @media screen and (max-width: 800px) {
       min-height: calc(95vw + 20px);
+      margin: 1em auto !important;;
     }
 
     .window-body {
       flex: 1;
       margin: 0;
       min-height: 500px;
+      overflow: hidden;
 
       img {
         width: 500px;
@@ -81,8 +90,8 @@
 
       @media screen and (max-width: 800px) {
         img {
-          width: 95vw;
-          height: 95vw;
+          width: 100%;
+       //   height: 95vw;
         }
       }
     }
@@ -122,6 +131,11 @@
   width: 100%;
   margin: 1em auto;
   max-width: 1025px;
+
+  @media screen and (max-width: 1024px) {
+    max-width: calc(100% - 6px);
+    margin: 0 auto;
+  }
 
   .window-body {
     position: relative;
