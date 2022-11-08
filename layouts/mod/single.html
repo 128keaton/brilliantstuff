@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="single-main single-mod">
+    {{- partial "header.html" . -}}
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">{{.Title}}</div>
+            <div class="title-bar-controls">
+
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="inner">
+            <img src="{{.Params.cover}}" alt="cover img">
+                {{.Content}}
+            </div>
+        </div>
+        <div class="status-bar">
+        </div>
+    </div>
+
+    {{- partial "single-footer.html" . -}}
+</div>
+
+{{ end }}

@@ -1,0 +1,70 @@
+.mods {
+  background: url("../img/tile/bgblackstreamers.gif");
+
+  text-align: center;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .mods-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+    .mod-summary {
+      display: flex;
+      margin: 1em;
+      height: 300px;
+      background: transparent;
+      box-shadow: none;
+
+      .window-body {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+
+        .status-bar {
+          margin: 0;
+        }
+
+        img {
+          flex: 1;
+          max-height: 200px;
+          object-fit: cover;
+          margin-top: -6px;
+          margin-bottom: -2px;
+          background-color: silver;
+          padding: 0 2px 2px;
+          box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        h3 {
+          font-size: 14px;
+        }
+
+        h2, h3 {
+          color: white;
+          padding: 0.5em;
+          font-weight: normal;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+}
+

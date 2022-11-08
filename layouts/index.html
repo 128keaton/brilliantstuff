@@ -60,10 +60,24 @@
             </div>
         </div>
 
+        <div class="mods section">
+            {{- partial "construction.html" . -}}
+            <div class="header">
+                {{ $modsHeader := resources.Get "/img/mods.png" }}
+                <img class="header-image" src="{{ $modsHeader.RelPermalink }}" alt="store">
+            </div>
+             <div class="list mods-list">
+                {{$failures := where .Site.RegularPages ".Section" "eq" "mod" }}
+                {{ range $failures }}
+                {{ partial "mod-summary.html" . }}
+                {{ end }}
+             </div>
+        </div>
+
         <div class="store section">
             {{- partial "construction.html" . -}}
             <div class="header" style="background-image: url(img/marquee.gif)">
-                 {{ $storeHeader := resources.Get "/img/store.png" }}
+                {{ $storeHeader := resources.Get "/img/store.png" }}
                 <img class="header-image" src="{{ $storeHeader.RelPermalink }}" alt="store">
                 <div class="dollar">
                     {{ $dollarGif := resources.Get "/img/dollar.gif" }}
