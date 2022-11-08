@@ -8,15 +8,16 @@
     padding-bottom: 2em;
     position: relative;
 
-   @media screen and (max-width: 850px) {
-     .header {
-       max-width: 80vw;
-       margin: 0 auto;
-       img {
-         max-width: 200px;
-       }
-     }
-   }
+    @media screen and (max-width: 850px) {
+      .header {
+        max-width: 80vw;
+        margin: 0 auto;
+
+        img {
+          max-width: 200px;
+        }
+      }
+    }
   }
 
   .footer {
@@ -27,8 +28,37 @@
   .logo {
     width: 100%;
     filter: drop-shadow(30px 10px 4px #4444dd);
-    height: 100vh;
+    height: 80vh;
     object-fit: contain;
+  }
+
+  p.welcome {
+    text-align: center;
+    color: lightgray;
+    font-size: 25px;
+    padding: 2em;
+    -webkit-font-smoothing: none;
+    font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+  }
+
+  .motd {
+    height: 20vh;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    position: relative;
+    font-style: italic;
+    font-weight: normal;
+    -webkit-font-smoothing: none;
+    font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+
+    p {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -2em;
+      margin-top: 0;
+    }
   }
 
   .arrow-down {

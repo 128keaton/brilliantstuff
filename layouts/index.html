@@ -3,18 +3,28 @@
     {{ $mainLogo := resources.Get "/img/bs-card.png" }}
     <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
 
+    <div class="motd">
+        <p>"we print straight garbage"</p>
+    </div>
     <div class="arrow-down">
         <p>(scroll down)</p>
         {{ $backArrow := resources.Get "/img/back-arrow.gif" }}
         <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
     </div>
     <div class="inner-content homepage">
+    <p class="welcome">
+    Welcome to Brilliant Stuff
+    </p>
         <div class="printers section">
+            <div class="header">
+                {{ $sliderGif := resources.Get "/img/slidbar.gif" }}
+                <img src="{{ $sliderGif.RelPermalink }}" alt="printers">
+            </div>
+            {{- partial "twitch-stream.html" . -}}
             <div class="header">
                 {{ $printersGif := resources.Get "/img/printer.gif" }}
                 <img src="{{ $printersGif.RelPermalink }}" alt="printers">
             </div>
-            {{- partial "twitch-stream.html" . -}}
             <div class="list">
                 {{ range (index .Site.Data.printers) }}
                 {{ partial "printers/printer-window" . }}
