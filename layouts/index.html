@@ -12,9 +12,9 @@
         <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
     </div>
     <div class="inner-content homepage">
-    <p class="welcome">
-    Welcome to Brilliant Stuff
-    </p>
+        <p class="welcome">
+            Welcome to Brilliant Stuff
+        </p>
         <div class="printers section">
             <div class="header">
                 {{ $sliderGif := resources.Get "/img/slidbar.gif" }}
@@ -22,8 +22,8 @@
             </div>
             {{- partial "twitch-stream.html" . -}}
             <div class="header">
-                {{ $printersGif := resources.Get "/img/printer.gif" }}
-                <img src="{{ $printersGif.RelPermalink }}" alt="printers">
+                {{ $printersHeader := resources.Get "/img/printers.png" }}
+                <img class="header-image wide" src="{{ $printersHeader.RelPermalink }}" alt="printers">
             </div>
             <div class="list">
                 {{ range (index .Site.Data.printers) }}
@@ -42,7 +42,8 @@
                 </div>
 
                 <div class="center">
-                    <h1>Failure Gallery</h1>
+                    {{ $failuresHeader := resources.Get "/img/failures.png" }}
+                    <img class="header-image" src="{{ $failuresHeader.RelPermalink }}" alt="failures">
                 </div>
 
                 <div class="right">
@@ -62,7 +63,8 @@
         <div class="store section">
             {{- partial "construction.html" . -}}
             <div class="header" style="background-image: url(img/marquee.gif)">
-                <h1>Store</h1>
+                 {{ $storeHeader := resources.Get "/img/store.png" }}
+                <img class="header-image" src="{{ $storeHeader.RelPermalink }}" alt="store">
                 <div class="dollar">
                     {{ $dollarGif := resources.Get "/img/dollar.gif" }}
                     <img src="{{ $dollarGif.RelPermalink }}" alt="dollar">
@@ -75,16 +77,16 @@
     </div>
 </div>
 <script type="text/javascript">
-(function() {
-    document.querySelectorAll("button").forEach(element => {
-        const buttonType = element.getAttribute("aria-label");
-        const buttonLink = element.getAttribute("data-link");
-        if (buttonType === "Maximize" && !!buttonLink) {
-           element.addEventListener('click', () => {
-               window.location.href = buttonLink;
-           });
-        }
-})
-})();
+    (function () {
+        document.querySelectorAll("button").forEach(element => {
+            const buttonType = element.getAttribute("aria-label");
+            const buttonLink = element.getAttribute("data-link");
+            if (buttonType === "Maximize" && !!buttonLink) {
+                element.addEventListener('click', () => {
+                    window.location.href = buttonLink;
+                });
+            }
+        })
+    })();
 </script>
 {{ end }}

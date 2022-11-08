@@ -65,3 +65,13 @@ body {
   text-align: center;
 }
 
+
+.header-image {
+    width: 250px;
+
+    &.wide {
+        width: 40%;
+        margin: 3em;
+        max-width: 500px;
+    }
+}
