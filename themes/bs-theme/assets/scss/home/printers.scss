@@ -89,6 +89,7 @@
       }
 
       @media screen and (max-width: 800px) {
+          min-height: unset!important;
         img {
           width: 100%;
        //   height: 95vw;

@@ -62,6 +62,7 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1500px;
+  overflow-x: hidden;
 
   .failure-summary {
     margin: 1em;
@@ -116,9 +117,8 @@
         box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
 
         @media screen and (max-width: 850px) {
-          max-height: 300px;
-          height: unset;
           padding: 0;
+          max-width: calc(100vw - 1.5em);
         }
       }
 
