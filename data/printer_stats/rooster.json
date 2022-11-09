@@ -1,12 +1,1 @@
-{
-  "result": {
-    "job_totals": {
-      "total_jobs": 401,
-      "total_time": 2407663.352629621,
-      "total_print_time": 2257875.9337121234,
-      "total_filament_used": 3619558.123161602,
-      "longest_job": 242931.98771559,
-      "longest_print": 242693.04971850995
-    }
-  }
-}
+{"result": {"job_totals": {"total_jobs": 432, "total_time": 2463854.671298663, "total_print_time": 2308370.3888889346, "total_filament_used": 3685166.296391569, "longest_job": 242931.98771559, "longest_print": 242693.04971850995}}}
