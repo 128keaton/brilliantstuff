@@ -1,0 +1,60 @@
+.live-stream {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/tile/microfab.gif");
+  height: 100vh;
+
+  .header, .footer {
+    position: absolute;
+    height: 33%;
+    padding: 0 !important;
+    width: 100%;
+    background: linear-gradient(360deg, black, transparent);
+  }
+
+  .header {
+    top: -1.5em;;
+    background: linear-gradient(180deg, black, transparent);
+  }
+
+  .footer {
+    bottom: 0;
+  }
+
+  .twitch-window {
+    width: 100%;
+    margin: 1em auto;
+    max-width: 1025px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+      max-width: calc(100% - 6px);
+      margin: 0 auto;
+    }
+
+    .window-body {
+      position: relative;
+      flex: 1;
+      margin: 0;
+      overflow: hidden;
+
+      #twitch-embed {
+        position: absolute;
+        left: 0;
+        right: 1px;
+        bottom: 3px;
+        top: 3px;
+        background: black;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

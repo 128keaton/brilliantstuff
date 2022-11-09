@@ -1,6 +1,11 @@
 .homepage {
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
+    .hero {
+        height: 100vh;
+        background-image: url("../img/bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
 
   .section {
@@ -38,7 +43,6 @@
     color: lightgray;
     font-size: 32px;
     padding: 2em;
-    background: black;
     -webkit-font-smoothing: none;
     font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
     position: absolute;;
@@ -70,7 +74,7 @@
 
   .arrow-down {
     position: absolute;
-    bottom: 3em;
+    bottom: 4em;
     left: 0;
     right: 0;
     display: flex;
@@ -78,6 +82,8 @@
     align-items: center;
     flex-direction: column;
     opacity: 0.7;
+    background: linear-gradient(360deg, black, transparent);
+    padding-bottom: 4em;
 
     p {
       -webkit-font-smoothing: none;
@@ -95,4 +101,5 @@
   @import "./home/store";
   @import "./home/failures";
   @import "./home/mods";
+  @import "./home/live-stream";
 }

@@ -1,27 +1,36 @@
 {{ define "main" }}
 <div class="homepage">
-<p class="welcome">
-Welcome to.....
-</p>
+    <p class="welcome">
+        Welcome to.....
+    </p>
 
-    {{ $mainLogo := resources.Get "/img/bs-card.png" }}
-    <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
+    <div class="hero">
+        {{ $mainLogo := resources.Get "/img/bs-card.png" }}
+        <img src="{{ $mainLogo.RelPermalink }}" alt="logo" class="logo">
 
-    <div class="motd">
-        <p>"we print straight garbage"</p>
-    </div>
-    <div class="arrow-down">
-        <p>(scroll down)</p>
-        {{ $backArrow := resources.Get "/img/back-arrow.gif" }}
-        <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
+
+        <div class="arrow-down">
+            <p>(scroll down)</p>
+            {{ $backArrow := resources.Get "/img/back-arrow.gif" }}
+            <img src="{{ $backArrow.RelPermalink }}" alt="back arrow">
+        </div>
+
+        {{- partial "nav.html" . -}}
     </div>
     <div class="inner-content homepage">
-        <div class="printers section">
+        <div class="live-stream section" id="live">
+            <div class="header">
+            </div>
+            {{- partial "twitch-stream.html" . -}}
+            <div class="footer">
+            </div>
+        </div>
+        <div class="printers section" id="printers">
             <div class="header">
                 {{ $sliderGif := resources.Get "/img/slidbar.gif" }}
                 <img src="{{ $sliderGif.RelPermalink }}" alt="printers">
+                <img class="mirrored" src="{{ $sliderGif.RelPermalink }}" alt="printers">
             </div>
-            {{- partial "twitch-stream.html" . -}}
             <div class="header">
                 {{ $printersHeader := resources.Get "/img/printers.png" }}
                 <img class="header-image wide" src="{{ $printersHeader.RelPermalink }}" alt="printers">
@@ -33,7 +42,7 @@ Welcome to.....
             </div>
         </div>
 
-        <div class="failures section">
+        <div class="failures section" id="failures">
             {{- partial "construction.html" . -}}
             <div class="header">
                 {{ $failureGif := resources.Get "/img/nuke.gif" }}
@@ -61,21 +70,21 @@ Welcome to.....
             </div>
         </div>
 
-        <div class="mods section">
+        <div class="mods section" id="mods">
             {{- partial "construction.html" . -}}
             <div class="header">
                 {{ $modsHeader := resources.Get "/img/mods.png" }}
                 <img class="header-image" src="{{ $modsHeader.RelPermalink }}" alt="store">
             </div>
-             <div class="list mods-list">
+            <div class="list mods-list">
                 {{$failures := where .Site.RegularPages ".Section" "eq" "mod" }}
                 {{ range $failures }}
                 {{ partial "mod-summary.html" . }}
                 {{ end }}
-             </div>
+            </div>
         </div>
 
-        <div class="store section">
+        <div class="store section" id="store">
             {{- partial "construction.html" . -}}
             <div class="header">
                 {{ $storeHeader := resources.Get "/img/store.png" }}
