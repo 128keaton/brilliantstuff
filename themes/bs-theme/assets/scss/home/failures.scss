@@ -4,13 +4,121 @@
   text-align: center;
 
   .header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-.left, .right {
-      flex: 1;
+  .left, .right {
+    flex: 1;
   }
 }
 
+.failures-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  overflow-x: hidden;
+
+  .failure-summary {
+    margin: 1em;
+    text-align: left;
+    flex: 1;
+    min-width: 460px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 850px) {
+      min-width: unset;
+    }
+
+    .window-body {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      position: relative;
+
+      @media screen and (max-width: 850px) {
+        margin: 0;
+        padding: 0;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(90deg, navy, #1084d0);
+        color: white;
+        padding: 2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid gray;
+        border-bottom: 2px solid gray;
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+        width: calc(100% - 4em);
+
+        @media screen and (max-width: 850px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            text-align: center;
+        }
+      }
+
+
+      .status-bar {
+        margin: 0;
+      }
+
+    .image-holder {
+          min-height: 300px;
+          width: 100%;
+          height: calc(100% - 116.5px);
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          background-color: black;
+          background: url("../img/tile/bghttp.gif");
+          border-top: 2px solid gray;
+          border-left: 2px solid gray;
+          border-right: 2px solid gray;
+          position: relative;
+
+      }
+
+      img {
+        max-width: 100%;
+        object-fit: cover;
+        background-color: silver;
+        padding: 0;
+
+        @media screen and (max-width: 850px) {
+          padding: 0;
+          max-width: calc(100vw - 1.5em);
+        }
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+
+      h2, h3, p {
+        padding: 5px;
+        font-weight: normal;
+        margin: 0;
+      }
+
+     p {
+          font-size: 16px;
+      }
+    }
+  }
+}

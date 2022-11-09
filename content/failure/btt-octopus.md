@@ -2,13 +2,14 @@
 title: "BTT Octopus"
 date: 2022-11-03T21:39:12-05:00
 draft: false
-cover: img/failures/btt-board.jpeg
+cover: img/failures/btt-board
+description: "A collective summary of our BTT board failures (there are alot)"
 categories:
 - failure
 ---
 
-![board](img/failures/btt-board.jpeg)
-![steppers](img/failures/btt-steppers.jpeg)
+![board](img/failures/btt-board.jpg)
+![steppers](img/failures/btt-steppers.jpg)
 
 This happened after a power on.
 

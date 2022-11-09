@@ -11,7 +11,11 @@
         </div>
         <div class="window-body">
             <div class="inner">
-            <img src="{{.Params.cover}}" alt="cover img">
+                <picture class="image-holder">
+                    <source srcset="{{.Params.cover}}.webp" type="image/webp">
+                    <img srcset="{{.Params.cover}}.jpg" alt="cover img">
+                </picture>
+
                 {{.Content}}
             </div>
         </div>

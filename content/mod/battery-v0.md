@@ -1,7 +1,7 @@
 ---
 title: "Battery-powered V0.1"
 type: mod
-cover: img/mods/battery-v0.jpg
+cover: img/mods/battery-v0
 categories:
 - mods
 fits:

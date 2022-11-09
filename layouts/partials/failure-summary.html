@@ -6,10 +6,16 @@
         </div>
     </div>
     <div class="window-body">
-        <img src="{{.Params.cover}}" alt="cover img">
+        <picture class="image-holder">
+            <source srcset="{{.Params.cover}}.webp" type="image/webp">
+            <img srcset="{{.Params.cover}}.jpg" alt="cover img">
+        </picture>
         <div class="overlay">
-        <h2>{{.Title}}</h2>
-        <a class="fake-button" href="{{.RelPermalink}}">Go</a>
+            <div class="meta">
+                <h2>{{.Title}}</h2>
+                <p class="description"> {{.Params.description}}
+            </div>
+            <a class="fake-button" href="{{.RelPermalink}}">Go</a>
         </div>
     </div>
 </div>

@@ -1,15 +1,18 @@
 <div class="window mod-summary">
-    <div class="window-body">
-        <div class="title-bar">
-            <div class="title-bar-text">{{.RelPermalink}}index.html</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close"></button>
-            </div>
+    <div class="title-bar">
+        <div class="title-bar-text">{{.RelPermalink}}index.html</div>
+        <div class="title-bar-controls">
+            <button aria-label="Close"></button>
         </div>
-        <img src="{{.Params.cover}}" alt="cover img">
-
-
-        <h2>{{.Title}}</h2>
-        <a class="fake-button" href="{{.RelPermalink}}">Go</a>
+    </div>
+    <div class="window-body">
+        <picture class="image-holder">
+            <source srcset="{{.Params.cover}}.webp" type="image/webp">
+            <img srcset="{{.Params.cover}}.jpg" alt="cover img">
+        </picture>
+        <div class="overlay">
+            <h2>{{.Title}}</h2>
+            <a class="go-button" href="{{.RelPermalink}}">Go</a>
+        </div>
     </div>
 </div>
