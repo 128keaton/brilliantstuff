@@ -1,15 +1,15 @@
 <div class="window failure-summary">
-    <div class="window-body">
-        <div class="title-bar">
-            <div class="title-bar-text">{{.RelPermalink}}index.html</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close"></button>
-            </div>
+    <div class="title-bar">
+        <div class="title-bar-text">{{.RelPermalink}}index.html</div>
+        <div class="title-bar-controls">
+            <button aria-label="Close"></button>
         </div>
+    </div>
+    <div class="window-body">
         <img src="{{.Params.cover}}" alt="cover img">
-
-
+        <div class="overlay">
         <h2>{{.Title}}</h2>
         <a class="fake-button" href="{{.RelPermalink}}">Go</a>
+        </div>
     </div>
 </div>
