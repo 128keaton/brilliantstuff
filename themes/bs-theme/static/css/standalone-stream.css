@@ -1,0 +1,12 @@
+.window {
+    width: calc(50vw - 6px);
+    height: calc(50vh - 6px);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
