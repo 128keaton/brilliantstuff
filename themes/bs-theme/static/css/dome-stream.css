@@ -1,0 +1,66 @@
+html, body {
+    position: relative;
+    min-width: 1920px;
+    min-height: 1080px;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    background: url("/img/tile/watercolor.jpg");
+}
+
+.window {
+    position: absolute;
+}
+
+#cow {
+    width: 704px;
+    height: 480px;
+    left: 200px;
+    top: 26px;
+}
+
+#rooster {
+    width: 528px;
+    height: 297px;
+    left: 71px;
+    top: 336px;
+}
+
+#cnc {
+    width: 471px;
+    height: 353px;
+    left: 91px;
+    top: 696px;
+}
+
+#dog {
+    width: 662px;
+    height: 372px;
+    left: 797px;
+    top: 112px;
+}
+
+#horsie {
+    width: 517px;
+    height: 291px;
+    left: 1362px;
+    top: 740px;
+}
+
+#domeRoom {
+    width: 1057px;
+    height: 673px;
+    left: 631px;
+    top: 570px;
+}
+
+#domeHorsie {
+    width: 630px;
+    height: 924px;
+    left: 1861px;
+    top: 39px;
+}
