@@ -79,3 +79,15 @@ html, body {
     height: 22px;
     margin-right: 5px;
 }
+
+.notification-icon {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 28px;
+    margin-bottom: 3px;
+}
+
+.time {
+    margin-right: 1em;
+    margin-left: 1em;
+}
