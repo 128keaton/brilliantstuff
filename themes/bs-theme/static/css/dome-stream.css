@@ -1,9 +1,9 @@
 html, body {
     position: relative;
-    min-width: 1920px;
-    min-height: 1080px;
-    height: 100%;
+    width: 1920px;
+    height: 1080px;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -14,11 +14,12 @@ body {
 
 .window {
     position: absolute;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
 }
 
 #cow {
-    width: 704px;
-    height: 480px;
+    width: 504px;
+    height: 282px;
     left: 200px;
     top: 26px;
 }
@@ -45,22 +46,24 @@ body {
 }
 
 #horsie {
-    width: 517px;
+    width: 516px;
     height: 291px;
-    left: 1362px;
+    left: 1363px;
     top: 740px;
+
+    z-index: 10;
 }
 
 #domeRoom {
-    width: 1057px;
-    height: 673px;
+    width: 769px;
+    height: 433px;
     left: 631px;
     top: 570px;
 }
 
 #domeHorsie {
-    width: 630px;
-    height: 924px;
-    left: 1861px;
+    width: 376px;
+    height: 644px;
+    left: 1495px;
     top: 39px;
 }
