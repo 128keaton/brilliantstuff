@@ -4,12 +4,21 @@ html, body {
     height: 1080px;
 }
 
+html {
+    background: transparent!important;
+}
+
+
 body {
     margin: 0;
     padding: 0;
 
     overflow: hidden;
     background: url("/img/tile/watercolor.jpg");
+}
+
+body.transparent {
+    background: transparent!important;
 }
 
 .window {
