@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://unpkg.com/98.css"/>
+<link rel="stylesheet" href="/css/window-stream.css"/>
+<link rel="stylesheet" href="/css/stream-stats.css"/>
+
+<div class="window window-printers">
+    <div class="title-bar">
+        <img class="title-bar-img" src="/img/window-icons/replacethispart.ico" alt="welcome">
+        <div class="title-bar-text">Printers</div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
+        <ul class="tree-view">
+
+            <li class="printer-status-item">
+                <div class="status-icon" id="statusIconHorsie">
+                </div>
+                <strong>Horsie</strong>
+                <ul>
+                    <li><span class="printer-status" id="statusHorsie">n/a</span></li>
+                    <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempHorsie">n/a</span></li>
+                    <li>Bed Temperature - <span class="printer-bed-temp" id="bedtempHorsie">n/a</span></li>
+                </ul>
+            </li>
+
+            <li class="printer-status-item">
+                <div class="status-icon" id="statusIconDog">
+                </div>
+                <strong>Dog</strong>
+                <ul>
+                    <li><span class="printer-status" id="statusDog">n/a</span></li>
+                    <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempDog">n/a</span></li>
+                    <li>Bed Temperature - <span class="printer-bed-temp" id="bedtempDog">n/a</span></li>
+                </ul>
+            </li>
+
+            <li class="printer-status-item">
+                <div class="status-icon" id="statusIconRooster">
+                </div>
+                <strong>Rooster</strong>
+                <ul>
+                    <li><span class="printer-status" id="statusRooster">n/a</span></li>
+                    <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempRooster">n/a</span></li>
+                    <li>Bed Temperature - <span class="printer-bed-temp" id="bedtempRooster">n/a</span>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="printer-status-item">
+                <div class="status-icon" id="statusIconCow">
+                </div>
+                <strong>Cow</strong>
+                <ul>
+                    <li><span class="printer-status" id="statusCow">n/a</span></li>
+                    <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempCow">n/a</span></li>
+                    <li>Bed Temperature - <span class="printer-bed-temp" id="bedtempCow">n/a</span></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </div>
+
+</div>
+
+<script src="/js/stats.js"></script>

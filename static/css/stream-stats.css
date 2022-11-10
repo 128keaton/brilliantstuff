@@ -1,0 +1,51 @@
+.window-printers {
+    display: flex;
+    flex-direction: column;
+}
+
+.window-printers .window-body {
+    flex: 1;
+}
+
+.window-printers ul.tree-view {
+    padding: 6px 6px 6px 4em !important;
+    height: calc(100%  - 12px);
+}
+.window-printers .printer-status {
+    text-transform: capitalize;
+}
+.window-printers .printer-status-item {
+    position: relative;
+}
+.window-printers .printer-status-item .status-icon {
+    position: absolute;
+    left: -36px;
+    top: 0;
+    width: 30px;
+    bottom: 0;
+    transition: all 350ms ease-in-out;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+}
+.window-printers .printer-status-item .status-icon.red {
+    background: red;
+}
+.window-printers .printer-status-item .status-icon.green {
+    background: #29e529;
+}
+.window-printers .printer-status-item .status-icon.orange {
+    background-color: #ffa71d;
+}
+.window-printers .printer-status-item .status-icon.blue {
+    background: #5ddaff;
+}
+.window-printers .printer-status-item .status-icon.blinking {
+    animation: blink 1s ease-in-out infinite;
+}
+.window-printers .printer-status-item .status-icon.blinkingSlow {
+    animation: blink 5s ease-in-out infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
