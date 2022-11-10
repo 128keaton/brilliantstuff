@@ -1,0 +1,21 @@
+html, body {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    background: transparent!important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.window {
+    position: absolute;
+    top: -0.5em;
+    left: 0.5em;
+    height: calc(100% - 2em);
+    width: calc(100% - 2em);
+    margin: 1em auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+}
+
