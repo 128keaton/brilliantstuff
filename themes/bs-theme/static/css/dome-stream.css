@@ -2,24 +2,22 @@ html, body {
     position: relative;
     width: 1920px;
     height: 1080px;
-}
-
-html {
     background: transparent!important;
-}
-
-
-body {
     margin: 0;
     padding: 0;
-
     overflow: hidden;
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: url("/img/tile/watercolor.jpg");
 }
 
-body.transparent {
-    background: transparent!important;
-}
 
 .window {
     position: absolute;
