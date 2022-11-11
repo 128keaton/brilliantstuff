@@ -1,15 +1,27 @@
 .window-printers {
-    display: flex;
-    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+
+    display: block;
+    min-height: unset!important;
+}
+
+.window-printers .title-bar-text {
+    margin-left: 20px;
+}
+
+.window-printers .title-bar-img {
+    position: absolute;
+    width: 12px;
+    left: 8px;
 }
 
 .window-printers .window-body {
-    flex: 1;
+    min-height: unset!important;
 }
 
 .window-printers ul.tree-view {
     padding: 6px 6px 6px 4em !important;
-    height: calc(100%  - 12px);
 }
 .window-printers .printer-status {
     text-transform: capitalize;

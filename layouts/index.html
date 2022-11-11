@@ -34,6 +34,8 @@
                 {{ $printersHeader := resources.Get "/img/printers.png" }}
                 <img class="header-image wide" src="{{ $printersHeader.RelPermalink }}" alt="printers">
             </div>
+
+            {{ partial "stats-stream.html" }}
             <div class="list">
                 {{ range (index .Site.Data.printers) }}
                 {{ partial "printers/printer-window" . }}
