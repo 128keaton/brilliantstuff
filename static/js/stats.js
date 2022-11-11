@@ -50,8 +50,6 @@ function setFilename(status) {
             filename  =  filename.slice(0, 30) + '.gcode';
         }
 
-        console.log(filename);
-
         element.innerHTML = filename
     }
 }
