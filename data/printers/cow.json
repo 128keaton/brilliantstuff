@@ -1,8 +1,9 @@
 {
-  "name": "Cow",
-  "model": "Voron 2.4R2",
-  "cardImage": "printer-cards/cow.png",
-  "viewImage": "printers/cow-whole.jpg",
-  "permalink": "printers/cow",
-  "broken": false
+    "name": "Cow",
+    "model": "Voron 2.4R2",
+    "cardImage": "printer-cards/cow.png",
+    "viewImage": "printers/cow-whole.jpg",
+    "cardStream": "https://stats.fucklegal.com:8181/366fec88-2d24-48ae-855c-a52c126c640f.html",
+    "permalink": "printers/cow",
+    "broken": false
 }

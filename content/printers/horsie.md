@@ -3,6 +3,7 @@ title: "Horsie"
 model: "Voron 2.4R2"
 firmware: Klipper
 broken: True
+cardStream: https://stats.fucklegal.com:8181/e036c700-ab73-4628-82c8-a3eef5660b2f.html
 mods:
 - Euclid Probe
 - Stealthburner Toolhead

@@ -6,9 +6,9 @@
         <div class="title-bar">
             <div class="title-bar-text">Printer</div>
             <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close" data-link="../../"></button>
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" data-link="../../"></button>
             </div>
         </div>
         <div class="window-body">
@@ -57,11 +57,15 @@
                 <div class="single-printer">
                     <img class="printer-main" src="printers/{{(lower .Title)}}-whole.jpg" alt="Printer">
                     <p class="caption">{{.Title}}</p>
-
                 </div>
             </div>
 
             <div class="inner printer-content">
+                <div class="iframe-wrapper"
+                     style="height: 500px; display: flex; justify-content: center; align-items: center;">
+                    <iframe src="{{.Params.cardStream}}" width="500" height="400" frameborder="no" scrolling="no"
+                            allowfullscreen="true"></iframe>
+                </div>
                 {{.Content}}
             </div>
         </div>

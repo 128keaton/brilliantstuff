@@ -3,3 +3,5 @@ languageCode = 'en-us'
 title = 'Brilliant Stuff'
 [taxonomies]
     category = "categories"
+[markup.goldmark.renderer]
+    unsafe = true

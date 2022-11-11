@@ -1,8 +1,9 @@
 {
-  "name": "Horsie",
-  "model": "Voron 2.4R2",
-  "cardImage": "printer-cards/horsie.png",
-  "viewImage": "printers/horsie-whole.jpg",
-  "permalink": "printers/horsie",
-  "broken": true
+    "name": "Horsie",
+    "model": "Voron 2.4R2",
+    "cardImage": "printer-cards/horsie.png",
+    "cardStream": "https://stats.fucklegal.com:8181/e036c700-ab73-4628-82c8-a3eef5660b2f.html",
+    "viewImage": "printers/horsie-whole.jpg",
+    "permalink": "printers/horsie",
+    "broken": false
 }

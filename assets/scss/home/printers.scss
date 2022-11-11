@@ -33,7 +33,7 @@
   }
 
   @media screen and (max-width: 1024px) {
-    
+
 
     .window-printers {
       width: unset !important;
@@ -85,6 +85,19 @@
     @media screen and (max-width: 800px) {
       min-height: calc(95vw + 20px);
       margin: 1em auto !important;;
+    }
+
+    .iframe-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background: black;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 400px;
     }
 
     .window-body {

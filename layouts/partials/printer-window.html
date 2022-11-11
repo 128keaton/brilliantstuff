@@ -12,7 +12,14 @@
         <img src="img/failure.gif" class="failure-gif-overlay" alt="Failure">
         <img src="img/middle-finger.png" class="middle-finger-overlay" alt="Failure">
         {{end}}
+
+        {{ if isset . "cardStream" }}
+        <div class="iframe-wrapper">
+            <iframe src="{{.cardStream}}" frameborder="no" scrolling="no" allowfullscreen="false"></iframe>
+        </div>
+        {{ else }}
         <img src="{{.viewImage}}" alt="Printer">
+        {{ end }}
     </div>
     <div class="status-bar">
         <a class="fake-button" href="{{.permalink}}">View</a>
