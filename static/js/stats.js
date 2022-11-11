@@ -39,6 +39,23 @@ function setProgressBar(status) {
     document.querySelector('#progress' + status.name + "Percentage").innerHTML = `${progress}%`;
 }
 
+function setFilename(status) {
+    const filepath =  status.extended.result.status.virtual_sdcard.file_path;
+    const element = document.querySelector('#filename' + status.name);
+
+    if (!!filepath) {
+        let filename =  filepath.split('/').pop();
+
+        if (filename.length > 30){
+            filename  =  filename.slice(0, 30) + '.gcode';
+        }
+
+        console.log(filename);
+
+        element.innerHTML = filename
+    }
+}
+
 function updatePrinters() {
     fetch('https://stats.fucklegal.com:3678/')
     .then(response => response.json())
@@ -48,6 +65,7 @@ function updatePrinters() {
             processStatus(status);
             setTemperatures(status);
             setProgressBar(status);
+            setFilename(status);
         })
     });
 

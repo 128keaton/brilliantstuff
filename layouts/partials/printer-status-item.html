@@ -3,12 +3,15 @@
     </div>
     <div class="wrapper">
         <strong>{{.name}}</strong>
-        {{ partial "progress-bar.html" (dict "context" . "progress" "0" "id" "progress{{.name}}") }}
+        <div class="progress">
+            <div class="bar" id="progress{{.name}}"></div>
+        </div>
+        <span class="progress-percentage" id="progress{{.name}}Percentage">0%</span>
     </div>
     <ul>
         <li><span class="printer-status" id="status{{.name}}">n/a</span></li>
         <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtemp{{.name}}">n/a</span></li>
         <li>Bed Temperature - <span class="printer-bed-temp" id="bedtemp{{.name}}">n/a</span></li>
-        <li>Filename - <span class="printer-bed-temp" id="filename{{.name}}">n/a</span></li>
+        <li>Filename - <span class="printer-filename" id="filename{{.name}}">n/a</span></li>
     </ul>
 </li>

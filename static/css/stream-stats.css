@@ -30,6 +30,7 @@
 
 .window-printers .printer-status-item {
     position: relative;
+    min-height: 100px;
 }
 
 .window-printers .printer-status-item .status-icon {
