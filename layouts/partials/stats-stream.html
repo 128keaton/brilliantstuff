@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="/css/stream-stats.css"/>
 
 <div class="window window-printers">
@@ -17,18 +16,25 @@
             <li class="printer-status-item">
                 <div class="status-icon" id="statusIconHorsie">
                 </div>
-                <strong>Horsie</strong>
+                <div class="wrapper">
+                    <strong>Horsie</strong>
+                    {{ partial "progress-bar.html" (dict "context" . "progress" "0" "id" "progressHorsie") }}
+                </div>
                 <ul>
                     <li><span class="printer-status" id="statusHorsie">n/a</span></li>
                     <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempHorsie">n/a</span></li>
                     <li>Bed Temperature - <span class="printer-bed-temp" id="bedtempHorsie">n/a</span></li>
+                    <li>Filename - <span class="printer-bed-temp" id="filenameHorsie">n/a</span></li>
                 </ul>
             </li>
 
             <li class="printer-status-item">
                 <div class="status-icon" id="statusIconDog">
                 </div>
-                <strong>Dog</strong>
+                <div class="wrapper">
+                    <strong>Dog</strong>
+                    {{ partial "progress-bar.html" (dict "context" . "progress" "0" "id" "progressDog") }}
+                </div>
                 <ul>
                     <li><span class="printer-status" id="statusDog">n/a</span></li>
                     <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempDog">n/a</span></li>
@@ -39,7 +45,10 @@
             <li class="printer-status-item">
                 <div class="status-icon" id="statusIconRooster">
                 </div>
-                <strong>Rooster</strong>
+                <div class="wrapper">
+                    <strong>Rooster</strong>
+                    {{ partial "progress-bar.html" (dict "context" . "progress" "0" "id" "progressRooster") }}
+                </div>
                 <ul>
                     <li><span class="printer-status" id="statusRooster">n/a</span></li>
                     <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempRooster">n/a</span></li>
@@ -51,7 +60,10 @@
             <li class="printer-status-item">
                 <div class="status-icon" id="statusIconCow">
                 </div>
-                <strong>Cow</strong>
+                <div class="wrapper">
+                    <strong>Cow</strong>
+                    {{ partial "progress-bar.html" (dict "context" . "progress" "0" "id" "progressCow") }}
+                </div>
                 <ul>
                     <li><span class="printer-status" id="statusCow">n/a</span></li>
                     <li>Hotend Temperature - <span class="printer-hotend-temp" id="hotendtempCow">n/a</span></li>

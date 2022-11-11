@@ -33,6 +33,12 @@ function setTemperatures(status) {
     hotendTempElement.innerHTML = `${status.temperature.tool0.actual} °C / ${status.temperature.tool0.target} °C`
 }
 
+function setProgressBar(status) {
+    const progress = Math.round(Number(status.extended.result.status.virtual_sdcard.progress) * 100);
+    document.querySelector('#progress' + status.name).style.width = `${progress}%`;
+    document.querySelector('#progress' + status.name + "Percentage").innerHTML = `${progress}%`;
+}
+
 function updatePrinters() {
     fetch('https://stats.fucklegal.com:3678/')
     .then(response => response.json())
@@ -41,7 +47,7 @@ function updatePrinters() {
         printerStatuses.forEach(status => {
             processStatus(status);
             setTemperatures(status);
-
+            setProgressBar(status);
         })
     });
 
@@ -49,3 +55,5 @@ function updatePrinters() {
 }
 
 updatePrinters();
+
+
