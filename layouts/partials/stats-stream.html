@@ -6,15 +6,15 @@
         <div class="title-bar-text">Printers</div>
         <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
+            <button aria-label="Maximize" data-link="/stats"></button>
             <button aria-label="Close"></button>
         </div>
     </div>
     <div class="window-body">
         <ul class="tree-view">
-        {{ range (index .printers) }}
-        {{ partial "printer-status-item.html" . }}
-        {{ end }}
+            {{ range (index .printers) }}
+            {{ partial "printer-status-item.html" . }}
+            {{ end }}
 
         </ul>
     </div>
