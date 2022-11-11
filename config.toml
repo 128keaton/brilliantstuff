@@ -1,6 +1,5 @@
 baseURL = ''
 languageCode = 'en-us'
 title = 'Brilliant Stuff'
-theme="bs-theme"
 [taxonomies]
     category = "categories"

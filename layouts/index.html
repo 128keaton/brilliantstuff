@@ -38,7 +38,7 @@
             {{ partial "stats-stream.html"  (dict "context" . "printers" .Site.Data.printers ) }}
             <div class="list">
                 {{ range (index .Site.Data.printers) }}
-                {{ partial "printers/printer-window" . }}
+                {{ partial "printer-window" . }}
                 {{ end }}
             </div>
         </div>
