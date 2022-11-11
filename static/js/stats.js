@@ -21,6 +21,10 @@ function processStatus(status) {
             flag = flagName;
     });
 
+    Object.values(stateClasses).forEach(removeClass => {
+        statusIconElement.classList.remove(...removeClass.split('-'));
+    })
+
     statusIconElement.classList.add(...stateClasses[flag].split('-'));
     element.innerHTML = flag;
 }
