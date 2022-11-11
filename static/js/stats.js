@@ -34,7 +34,7 @@ function setTemperatures(status) {
 }
 
 function updatePrinters() {
-    fetch('http://192.168.1.124:3678/')
+    fetch('https://stats.fucklegal.com:3678/')
     .then(response => response.json())
     .then(printerStatuses => {
 
