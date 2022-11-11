@@ -27,6 +27,10 @@
             {{ end }}
 
         </ul>
+
+        <div class="actions">
+            <button id="twitchButton" data-href="https://twitch.tv/printgod420">Twitch Stream</button>
+        </div>
     </div>
 
 </div>
@@ -39,11 +43,6 @@
 
     }
 
-    @media screen and (max-width: 1024px) {
-        .window {
-            height: unset !important;
-        }
-    }
 
     .window-body {
         height: calc(100% - 40px);
@@ -51,6 +50,33 @@
 
     .tree-view {
         height: calc(100% - 12px);
+    }
+
+    .actions {
+        display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .window {
+            height: unset !important;
+        }
+
+        .window-body {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .tree-view {
+            flex: 1;
+            height: fit-content;
+        }
+
+        .actions {
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .progress {

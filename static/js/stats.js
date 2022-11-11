@@ -75,3 +75,11 @@ function updatePrinters() {
 updatePrinters();
 
 
+const twitchButton = document.querySelector('button#twitchButton');
+
+if (!!twitchButton) {
+    twitchButton.addEventListener('click', (ev) => {
+        window.open(ev.target.getAttribute('data-href'), '_blank').focus();
+    });
+}
+
