@@ -85,6 +85,6 @@
 
 @keyframes blink {
     50% {
-            filter: saturate(0.5);
+            filter: saturate(0.1);
     }
 }
